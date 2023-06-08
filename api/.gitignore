@@ -5,6 +5,6 @@
 
 
 # misc
-.env
+/.env
 
 npm-debug.log*
