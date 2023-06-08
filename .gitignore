@@ -1,3 +1,0 @@
-# Ignore .env files in the api and client folders
-api/.env
-
