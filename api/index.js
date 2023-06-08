@@ -15,7 +15,7 @@ app.use(cookieParser())
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../client/public/upload");
+    cb(null, "https://reactnodeblog.github.com/public/upload");
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname);
@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.post("/api/upload", upload.single("file"), function (req, res) {
+app.post("/upload", upload.single("file"), function (req, res) {
   const file = req.file;
 
   res.status(200).json(file.filename);
@@ -36,9 +36,9 @@ const upload=multer({dest: 'uploads/'})
 app.post('/api/upload',upload.single('file'), function (req,res){
 res.status(200).json('Image has been uploaded')
 })*/
-app.use('/api/auth',authRoutes)
-app.use('/api/users',usersRoutes)
-app.use('/api/posts',postRoutes)
+app.use('/auth',authRoutes)
+app.use('/users',usersRoutes)
+app.use('/posts',postRoutes)
 
 app.listen(5000, ()=>{
 
