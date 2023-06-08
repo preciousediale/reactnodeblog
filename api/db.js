@@ -1,7 +1,7 @@
 import mysql from 'mysql'
 import dotenv from 'dotenv'
 dotenv.config();
-console.log("From DB.js:"+process.env.DB_PASSWORD)
+
 export const db= mysql.createConnection({
     host:process.env.DB_HOST,
     user:process.env.DB_USERNAME,

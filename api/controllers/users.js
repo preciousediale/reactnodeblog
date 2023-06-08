@@ -1,3 +1,3 @@
 export const users=(req,res)=>{
-    res.json(' from contgroller')
+    res.json(' from controller')
 }
